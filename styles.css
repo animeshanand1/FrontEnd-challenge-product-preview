@@ -1,0 +1,98 @@
+
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #fff;
+  font-family: Montserrat,Fraunces,'';
+  font-size: 14px;
+  height: 100vh;
+}
+.container {
+  display: flex;
+  background-color: var(--Cream);
+  justify-content: center;
+  height: 100%;
+  /* box-shadow: var(--Dark-grayish-blue,55%); */
+}
+.card {
+  display: flex;
+  margin: 22px;
+  justify-content: center;
+  align-self: center;
+  width: 400px;
+  /* border-radius: 42px; */
+}
+.left img {
+  width: 200px;
+  border-radius: 12px;
+  height: fit-content;
+}
+.right {
+  padding: 14px;
+  background-color: white;
+  border-radius: 12px;
+}
+.price {
+  display: flex;
+  justify-content: space-around;
+  color: var(--Dark-cyan);
+}
+
+.price .big {
+  font-size: 18px;
+  margin-right: 12px;
+}
+.price .line-through{
+  text-decoration: line-through;
+}
+.button {
+  background-color: var(--Dark-cyan);
+  color: white;
+  font-weight: 500;
+  width: 100%;
+  padding: 6px;
+  border-radius: 9px;
+  margin-bottom: 22px;
+  cursor: pointer;
+}
+.icon{
+  position: relative;
+}
+.icon-img{
+  position: absolute;
+  /* width: 18px; */
+  left: 32px;
+  background-color: var(--Dark-cyan);
+  top: 6px;
+}
+.icon img{
+  width: 18px;
+  border-radius: 50%;
+  
+}
+@media (max-width:768px) {
+  .card{
+    flex-direction : column;
+    max-width: 208px;
+  }
+  .card img{
+    position: relative;
+  }
+  .right{
+    position: absolute;
+    bottom: 55px;
+    max-width: 208px;
+  }
+  
+}
